@@ -1,0 +1,377 @@
+/* login.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* HTML & BODY */
+
+html,
+body{
+
+  width:100%;
+  min-height:100%;
+
+  margin:0;
+  padding:0;
+
+  overflow-x:hidden;
+
+  background:#0f172a;
+}
+
+/* BODY */
+
+body{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  position:relative;
+
+  overflow-y:auto;
+  overflow-x:hidden;
+
+  overscroll-behavior:none;
+
+  /* BACKGROUND UTAMA */
+  background:
+  linear-gradient(
+    rgba(15,23,42,0.65),
+    rgba(15,23,42,0.75)
+  ),
+  url('kosong.png');
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+/* EFFECT BULAT */
+
+.bg-circle{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  opacity:0.25;
+
+  z-index:1;
+}
+
+.circle1{
+
+  width:320px;
+  height:320px;
+
+  background:#d4af37;
+
+  top:-120px;
+  left:-120px;
+}
+
+.circle2{
+
+  width:320px;
+  height:320px;
+
+  background:#2563eb;
+
+  bottom:-120px;
+  right:-120px;
+}
+
+/* CONTAINER */
+
+.container{
+
+  width:100%;
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:20px;
+
+  position:relative;
+
+  z-index:2;
+}
+
+/* LOGIN CARD */
+
+.login-card{
+
+  width:100%;
+  max-width:430px;
+
+  margin:auto;
+
+  /* BACKGROUND CARD */
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.55)
+  ),
+  url('bg.png');
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  border:
+  1px solid rgba(255,255,255,0.15);
+
+  border-radius:35px;
+
+  padding:45px 35px;
+
+  box-shadow:
+  0 15px 40px rgba(0,0,0,0.35);
+
+  text-align:center;
+
+  color:white;
+
+  animation:fadeIn 0.8s ease;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* ANIMASI */
+
+@keyframes fadeIn{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(30px);
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+  }
+}
+
+/* HEADER */
+
+.header{
+
+  margin-bottom:35px;
+}
+
+/* ICON */
+
+.moon{
+
+  font-size:26px;
+
+  color:#facc15;
+
+  margin-bottom:15px;
+}
+
+/* TITLE */
+
+.header h1{
+
+  font-size:28px;
+
+  font-weight:700;
+
+  margin-bottom:10px;
+
+  letter-spacing:1px;
+}
+
+.header p{
+
+  color:#e2e8f0;
+
+  font-size:14px;
+
+  line-height:1.7;
+}
+
+/* INPUT */
+
+.input-group{
+
+  text-align:left;
+
+  margin-bottom:22px;
+}
+
+.input-group label{
+
+  display:block;
+
+  margin-bottom:10px;
+
+  font-size:14px;
+
+  color:#ffffff;
+}
+
+.input-group input{
+
+  width:100%;
+
+  padding:15px 18px;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:18px;
+
+  background:
+  rgba(255,255,255,0.12);
+
+  border:
+  1px solid rgba(255,255,255,0.15);
+
+  color:white;
+
+  font-size:15px;
+
+  transition:0.3s;
+}
+
+.input-group input:focus{
+
+  border:
+  1px solid #facc15;
+
+  box-shadow:
+  0 0 0 4px rgba(250,204,21,0.15);
+}
+
+.input-group input::placeholder{
+
+  color:#cbd5e1;
+}
+
+/* BUTTON */
+
+.login-btn{
+
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #d4af37,
+    #facc15
+  );
+
+  color:#111827;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  margin-top:10px;
+
+  box-shadow:
+  0 10px 25px rgba(212,175,55,0.25);
+}
+
+.login-btn:hover{
+
+  transform:translateY(-3px);
+
+  opacity:0.95;
+}
+
+/* FOOTER */
+
+.footer-text{
+
+  margin-top:25px;
+
+  font-size:13px;
+
+  color:#e2e8f0;
+}
+
+/* DASHBOARD */
+
+.dashboard-page{
+
+  display:none;
+
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  justify-content:center;
+
+  align-items:center;
+
+  z-index:5;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+  .login-card{
+
+    padding:35px 25px;
+
+    border-radius:28px;
+  }
+
+  .header h1{
+
+    font-size:22px;
+  }
+
+  .input-group input{
+
+    padding:14px 16px;
+
+    font-size:14px;
+  }
+
+  .login-btn{
+
+    padding:14px;
+
+    font-size:15px;
+  }
+
+}
