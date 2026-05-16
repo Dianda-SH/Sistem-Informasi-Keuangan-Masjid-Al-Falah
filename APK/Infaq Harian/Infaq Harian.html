@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Infaq Harian
+  </title>
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="Infaq Harian.css"
+  >
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <!-- CHART -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <!-- =========================
+       SIDEBAR
+  ========================== -->
+
+  <div
+    class="sidebar"
+    id="sidebar"
+  >
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+      <div class="logo-img">
+
+        <img
+          src="LOGO POLBAN HD.png"
+          alt="Logo"
+        >
+
+      </div>
+
+      <h2>
+        Masjid Al-Falah
+      </h2>
+
+    </div>
+
+    <!-- MENU -->
+
+    <div class="menu">
+
+      <!-- DASHBOARD -->
+
+      <a id="menuDashboard">
+
+        <i class="fa-solid fa-house"></i>
+
+        Dashboard
+
+      </a>
+
+      
+
+      <!-- INFAQ HARIAN -->
+
+      <a
+        id="menuHarian"
+        class="active"
+      >
+
+        <i class="fa-solid fa-wallet"></i>
+
+        Infaq Harian
+
+      </a>
+
+      <!-- INFAQ JUMAT -->
+
+      <a id="menuJumat">
+
+        <i class="fa-solid fa-mosque"></i>
+
+        Infaq Jumat
+
+      </a>
+
+      <!-- PENGELUARAN -->
+
+      <a id="menuPengeluaran">
+
+        <i class="fa-solid fa-money-bill-transfer"></i>
+
+        Pengeluaran
+
+      </a>
+
+      <!-- REMAJA MASJID -->
+
+      <a id="menuRemajaMasjid">
+
+        <i class="fa-solid fa-user-group"></i>
+
+        Remaja Masjid
+
+      </a>
+
+     <!-- LOGOUT -->
+
+<a id="menuLogout">
+
+  <i class="fa-solid fa-right-from-bracket"></i>
+
+  Logout
+
+</a>
+    </div>
+
+  </div>
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
+  <div class="main">
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+      <div class="left-nav">
+
+        <i
+          class="fa-solid fa-bars"
+          id="menuBtn"
+        ></i>
+
+        <h1>
+          Infaq Harian
+        </h1>
+
+      </div>
+
+      <!-- USER LOGIN -->
+
+      <div
+        class="admin"
+        id="namaAdmin"
+      >
+
+        Admin
+
+      </div>
+
+    </div>
+
+    <!-- =========================
+         FORM CONTAINER
+    ========================== -->
+
+    <div class="form-container">
+
+      <!-- HEADER -->
+
+      <div class="form-header">
+
+        <img
+          src="LOGO POLBAN HD.png"
+          alt="Logo"
+          class="form-logo"
+        >
+
+        <h2>
+          Input Keuangan
+        </h2>
+
+        <h3>
+          Infaq Harian
+        </h3>
+
+        <p>
+          Sistem Keuangan 
+        </p>
+
+        <span>
+          Masjid Al-Falah
+        </span>
+
+      </div>
+
+      <!-- FORM -->
+
+      <form id="formKeuangan">
+
+        <!-- ROW -->
+
+        <div class="row">
+
+          <!-- TANGGAL -->
+
+          <div class="input-box">
+
+            <label>
+              Tanggal
+            </label>
+
+            <div class="input-icon">
+
+              <i class="fa-solid fa-calendar"></i>
+
+              <input
+                type="date"
+                id="tanggal"
+                required
+              >
+
+            </div>
+
+          </div>
+
+          <!-- WAKTU -->
+
+          <div class="input-box">
+
+            <label>
+              Waktu
+            </label>
+
+            <div class="input-icon">
+
+              <i class="fa-solid fa-clock"></i>
+
+              <input
+                type="time"
+                id="waktu"
+                required
+              >
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- KETERANGAN -->
+
+        <div class="input-box">
+
+          <label>
+            Keterangan
+          </label>
+
+          <div class="input-icon">
+
+            <i class="fa-solid fa-note-sticky"></i>
+
+            <input
+              type="text"
+              id="keterangan"
+              placeholder="Masukkan keterangan"
+              required
+            >
+
+          </div>
+
+        </div>
+
+        <!-- JUMLAH -->
+
+        <div class="input-box">
+
+          <label>
+            Jumlah Infaq
+          </label>
+
+          <div class="input-icon">
+
+            <span class="rp">
+              Rp
+            </span>
+
+            <input
+              type="number"
+              id="jumlah"
+              placeholder="Masukkan jumlah"
+              required
+            >
+
+          </div>
+
+        </div>
+
+        <!-- INFO -->
+
+        <div class="info-grid">
+
+          <div class="info-card green">
+
+            <h4>
+              Total Harian
+            </h4>
+
+            <p id="totalHarian">
+              Rp 0
+            </p>
+
+          </div>
+
+          <div class="info-card blue">
+
+            <h4>
+              Transaksi
+            </h4>
+
+            <p id="totalTransaksi">
+              0
+            </p>
+
+          </div>
+
+          <div class="info-card purple">
+
+            <h4>
+              Rata-rata
+            </h4>
+
+            <p id="rataRata">
+              Rp 0
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <button type="submit">
+
+          <i class="fa-solid fa-paper-plane"></i>
+
+          Simpan Data
+
+        </button>
+
+        <!-- STATUS -->
+
+        <div id="status">
+
+        </div>
+
+      </form>
+
+    </div>
+
+  <!-- JS -->
+
+  <script src="Infaq Harian.js"></script>
+
+</body>
+
+</html>
+
